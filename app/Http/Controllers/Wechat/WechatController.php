@@ -22,6 +22,7 @@ class WechatController extends Controller
      */
     public function server(Request $request)
     {
+        dd('aa');
         Log::debug(
             '微信回调原始数据:' . json_encode($request->all(), JSON_UNESCAPED_UNICODE)
         );
