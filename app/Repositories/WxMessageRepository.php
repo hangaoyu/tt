@@ -101,6 +101,7 @@ class WxMessageRepository extends CommonRepository
         \Log::info('点击事件');
         $event = Event::where(['scene_str'=>$scene_str,'event_type' => 'CLICK'])->first();
         if ($event) {
+            \Log::info('找到事件');
             return $this->getReturnNews($event, $message);
         }
         $this->scanLog($message);
